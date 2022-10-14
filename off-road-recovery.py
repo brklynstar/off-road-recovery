@@ -1,76 +1,38 @@
-# def gear_choices():
-#     f = open('gear_list.txt', 'r')
-#     gear_list = f.readlines()
-#     f.close()
-#     gear_list = gear_list[0].split(' ')
-#     return gear_list
+#Define Functions
 
-#-----------------------------------------------------------------------
-#Definig Functions
+def welcome_message():
+    print("Welcome to the Off-Road_Recovery App!")
+    print("Choose an option: " "\n""1. I need recovery assistance" "\n""2. I want to assist in recovery""\n")
+    border_line()
+    
+    
+def border_line():
+    print("-" * 40)
 
-need_assistance = int(1)
-offer_assistance =int(2)
+need_assist = ("1. I need assistance")
+offer_assist = ("2. I want to offer assistance")
 
-
-def menu(option):
-    if option == 1:
-        return need_assistance
-    elif option == 2:
-        return offer_assistance
-
-def need_valid_option(option):
-    if option <2:
-        print("Invalid option, try again")
-    elif option >1:
-        print("Invalid option, try again")
-    else:
-        return
-
-
-def need_assistance():
-    if need_assistance == 1:
-        print(name = input("Name: "))
-        print(location = input("Location: "))
-        print(vehicle_make = input("Vehicle Make: "))
-        print(vehicle_model = input("Vehicle Model: "))
-        print(recovery_desc = input("Description of Recovery Needs: "))  
+def choices(need_assist, offer_assist):
+    if need_assist == 1:
+        print(need_assist_intake)
+    elif offer_assist == 2:
+        return offer_assist_intake
     else: 
-        return need_valid_option
+        print("Please enter option 1 or 2")
 
-def offer_assistance():
-    if offer_assistance == 2:
-        print(name = input("Name: "))
-        print(location = input("Location: "))
-        print(vehicle_make = input("Vehicle Make: "))
-        print(vehicle_model = input("Vehicle Model: "))
-        print(recovery_desc = input("Description of Recovery Needs: "))
-    else: 
-        return need_valid_option
+def need_assist_intake():
+    print(name = input("Name: "))
+    print(location = input("Location: "))
+    print(vehicle_make = input("Vehicle Make: "))
+    print(vehicle_model = input("Vehicle Model: "))
+    print(recovery_desc = input("Description of Recovery Needs: "))  
 
+def offer_assist_intake():
+    print(name = input("Name: "))
+    print(location = input("Location: "))
+    print(vehicle_make = input("Vehicle Make: "))
+    print(vehicle_model = input("Vehicle Model: "))
+    print(recovery_gear = input("List of Recovery Gear:  "))
 
-
-        
-
-
-
-
-
-
-
-        
-
-
-# def assist_or_be_assisted():
-#     if need_assistance == 1:
-        
-#     else:
-#         print()
-
-
-
-#----------------------------------------------------
-#Calling Functions
-print("Welcome to the Off-Road Recovery App!" "\n")
-print("Choose an option: " "\n" "1. I need recovery assistance" "\n"  "2. I want to assist in recovering someone" "\n")
-
-
+welcome_message()
+#Test Code
