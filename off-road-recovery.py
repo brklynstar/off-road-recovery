@@ -2,37 +2,41 @@
 
 def welcome_message():
     print("Welcome to the Off-Road_Recovery App!")
-    print("Choose an option: " "\n""1. I need recovery assistance" "\n""2. I want to assist in recovery""\n")
     border_line()
+    print("Choose an option: " "\n""1. I need recovery assistance" "\n""2. I want to assist in recovery""\n")
+    menu_input(need_assist,offer_assist)
     
     
 def border_line():
     print("-" * 40)
 
-need_assist = ("1. I need assistance")
-offer_assist = ("2. I want to offer assistance")
+need_assist = True
+offer_assist = True
 
-def choices(need_assist, offer_assist):
-    if need_assist == 1:
-        print(need_assist_intake)
-    elif offer_assist == 2:
-        return offer_assist_intake
-    else: 
-        print("Please enter option 1 or 2")
+def menu_input(need_assist, offer_assist):
+    print(input("Enter option: "))
+    if need_assist == True:
+        need_assist_intake()
+    elif offer_assist == True:
+        offer_assist_intake()
+    else:
+        print("Please enter a valid option")
 
 def need_assist_intake():
-    print(name = input("Name: "))
-    print(location = input("Location: "))
-    print(vehicle_make = input("Vehicle Make: "))
-    print(vehicle_model = input("Vehicle Model: "))
-    print(recovery_desc = input("Description of Recovery Needs: "))  
+    name = input("Name: ")
+    location = input("Location: ")
+    vehicle_make = input("Vehicle Make: ")
+    vehicle_model = input("Vehicle Model: ")
+    recovery_desc = input("Description of Recovery Needs: ")
+    print(name,"\n",location,"\n",vehicle_make,"\n",vehicle_model,"\n",recovery_desc, "\n")
 
 def offer_assist_intake():
-    print(name = input("Name: "))
-    print(location = input("Location: "))
-    print(vehicle_make = input("Vehicle Make: "))
-    print(vehicle_model = input("Vehicle Model: "))
-    print(recovery_gear = input("List of Recovery Gear:  "))
+    name = input("Name: ")
+    location = input("Location: ")
+    vehicle_make = input("Vehicle Make: ")
+    vehicle_model = input("Vehicle Model: ")
+    recovery_gear = input("List of Recovery Gear:  ")
+    print(name,"\n",location,"\n",vehicle_make,"\n",vehicle_model,"\n",recovery_gear, "\n")
 
 welcome_message()
 #Test Code
