@@ -1,5 +1,8 @@
 #Define Functions
 
+
+
+
 def welcome_menu():
     print("Welcome to the Off-Road_Recovery App!")
     border_line()
@@ -13,7 +16,6 @@ need_assist = 1
 offer_assist = 2
 
 def main_menu_input(option_1, option_2):
-    
     print(input("Enter option: "))
     if option_1 == need_assist:
        return need_assist_intake()
@@ -23,13 +25,15 @@ def main_menu_input(option_1, option_2):
         print("Please enter a valid option") #<- Not working, entering any number will continue to work
         return welcome_menu
 
+def request_success():
+    print("Thank you! Your assistance request has been posted!")
+
 def response():
     input("Are these details correct? y/n: ")
-    if response == "y,yes,Y,YES":
-        print("Thank you! Your assistance request has been posted!")#<- Not Working, program quits before message 
-        quit
-    elif response == "n, no, N, NO":
-            return welcome_menu
+    if input == "y,yes,Y,YES":
+       request_success #<- Not Working, program quits before message 
+    elif input == "n, no, N, NO":
+        return welcome_menu
 
 def need_assist_intake():
     name = input("Name: ")
@@ -46,11 +50,13 @@ def offer_assist_intake():
     vehicle_make = input("Vehicle Make: ")
     vehicle_model = input("Vehicle Model: ")
     recovery_gear = input("List of Recovery Gear:  ")
-    print("Your post submission details:""\n","\n","Name: ", name,"\n","Location: ",location,"\n","Vehicle Make: ", vehicle_make,"Vehicle Model: ","\n",vehicle_model,"Recovery Gear: ","\n",recovery_gear,"\n")
+    print("Your post submission details:""\n","\n","Name: ",name,"\n","Location: ",location,"\n","Vehicle Make: ",vehicle_make,"Vehicle Model: ","\n",vehicle_model,"Recovery Gear: ","\n",recovery_gear,"\n")
    
     
 welcome_menu()
 response()
-welcome_menu() # currently a no response will return you to the main menu, but I would like the user to be able to append their list.
+request_success()
 
+
+#welcome_menu() # currently a no response will return you to the main menu, but I would like the user to be able to append their list.
 #Test Code
