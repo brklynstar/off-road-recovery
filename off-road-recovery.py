@@ -32,7 +32,10 @@ def need_assist_intake():
     vehicle_model = input("Vehicle Model: ")
     recovery_desc = input("Description of Recovery Needs: ")
     print("\n","Your post submission details:""\n","\n","Name:","\n", name,"\n","\n","Location:","\n",location,"\n","\n","Vehicle Make:","\n", vehicle_make,"\n","\n","Vehicle Model:","\n", vehicle_model,"\n","\n","Recovery Details:","\n",recovery_desc,"\n", "\n")
-    response = input("Are these details correct? y/n: ")
+    response()
+
+def response():
+    input("Are these details correct? y/n: ")
     if response.lower() == "y" or response.lower() == "yes":
         print("Thank you! Your assistance request has been posted!")
     elif response.lower() == "n" or response.lower() == "no":
