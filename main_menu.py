@@ -11,98 +11,101 @@ def welcome_msg():
 def menu():
     print("Choose an Option:\n")
     print("[1] I Need Assistance")
-    print("[2] I Want to Help Recover")
+    print("[2] I Want to Help Recover Someone")
     print("[3] Exit Program\n")
 
 def get_post_details(): 
+    print()
     border_line()
     print("Enter Your Post Details")
     border_line()
     print()
 
+yes = ("y,yes, Y, YES")
+no = ("n, no, N, No")
+
+
 def post_detail_confirm():
+    border_line()
     input("Are these details correct? y/n: ")
-    if input == yes:
+    print()
+    if yes == yes:
         return request_successful()
-    elif input == no:
-        return get_post_details()
+    elif no == no:
+        return
     else: 
         print("Invalid Entry, Try Again")
 
 def need_assist_intake():
+    print()
     get_post_details()
-    name = input("Name: ")
-    location = input("Location: ")
-    vehicle_make = input("Vehicle Make: ")
-    vehicle_model = input("Vehicle Model: ")
-    recovery_desc = input("Description of Recovery Needs: ")
-    print("\n",
-    "Your post submission details:","\n",
-    "\n","Name:","\n", name,"\n","\n",
-    "Location:","\n",location,"\n",
-    "\n","Vehicle Make:","\n",
-     vehicle_make,"\n",
-     "\n","Vehicle Model:",
-     "\n",vehicle_model,"\n",
-     "\n","Recovery Details:",
-     "\n",recovery_desc,"\n", "\n"
-     )
-    return post_detail_confirm()
-    
-
-
-
+    name = input("Name: ""\n")
+    location = input("Location: ""\n")
+    vehicle_make = input("Vehicle Make: ""\n")
+    vehicle_model = input("Vehicle Model: ""\n")
+    recovery_desc = input("Description of Recovery Needs: ""\n")
+    border_line()
+    print("Your post submission details:")
+    border_line()
+    print( "\n",
+    "Name:","\n", name,"\n",
+    "\n","Location:","\n",location,"\n",
+    "\n","Vehicle Make:","\n","\n", vehicle_make,"\n",
+     "\n","Vehicle Model:","\n",vehicle_model,"\n",
+     "\n","Recovery Details:", "\n",recovery_desc,"\n","\n")
+   
 def offer_assist_intake():
     get_post_details()
-    name = input("Name: ")
-    location = input("Location: ")
-    vehicle_make = input("Vehicle Make: ")
-    vehicle_model = input("Vehicle Model: ")
-    recovery_gear = input("List of Recovery Gear:  ")
-    print("Your post submission details:""\n","\n","Name: ",name,"\n","Location: ",location,"\n","Vehicle Make: ",vehicle_make,"Vehicle Model: ","\n",vehicle_model,"Recovery Gear: ","\n",recovery_gear,"\n")
+    name = input("Name:  " "\n")
+    location = input("Location:  ""\n")
+    vehicle_make = input("Vehicle Make:  ""\n")
+    vehicle_model = input("Vehicle Model: ""\n")
+    recovery_gear = input("List of Recovery Gear:  ""\n")
+    border_line()
+    print("Your post submission details:")
+    border_line()
+    print( "\n",
+    "Name:","\n", name,"\n",
+    "\n","Location:","\n",location,"\n",
+    "\n","Vehicle Make:","\n", vehicle_make,"\n",
+     "\n","Vehicle Model:","\n",vehicle_model,"\n",
+     "\n","List of Recovery Gear:", "\n",recovery_gear,"\n","\n")
 
 def request_successful():
-    print("Thank you! Your assistance request has been posted!")
-    return request_successful()
-
-yes = ("y,yes, Y, YES")
-no = ("n, no, N, No")
-main_menu_input=()
-
-
-
-# def reenter_post_details(need_assist_intake, offer_assist_intake):
-#     if input =="n":
-#     reenter_post_details ==
-
-
+    print("Thank you! Your submission has posted!\n")
+    print("We're searching for available recovery assistance near you... \nHang tight...")
   
+#--------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------- 
+#--------------------------------------------------------------------------------------------
+#Main Menu 
+
 welcome_msg()
 print()
 menu()
 option= int(input("Enter Option:  "))
 
-
-
-
-
 while option != 0:
     if option == 1:
-        need_assist_intake()
+        need_assist_intake() # Handles user needing assistance input and submission review
+        post_detail_confirm() #Handles if user inputs are correct and invalid answers
+        print()
+        break
+    elif option == 2:
+        offer_assist_intake()#Handles user offering assistance input and submission review
         post_detail_confirm()
-       
-        pass
-            
-#     elif option == 2:
-#         offer_assist_intake()
-#         post_detail_confirm
-#             # reenter_post_details()
-#     else:
-#         print("Invalid Entry, Try Again")
+        print() 
+        break 
+    elif option == 3:
+        print("\nThank you for using the Off-Road Recovery app!")
+        break
+    else:
+        print("Invalid entry, Try again.")
+    print()
+    menu()
+    option= int(input("Enter Option:  "))
 
-# menu()
-    
-# print("We're searching for a local off-road member near you...")
+
         
 
 
