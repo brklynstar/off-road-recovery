@@ -1,0 +1,171 @@
+#----------------------------------------------------
+#----------------------------------------------------
+#----------------------------------------------------
+
+#Definig Functions
+
+
+from dis import Instruction
+from distutils.log import error
+from secrets import choice
+from tkinter import Menu
+
+
+
+menu_user_input =()
+
+def border_line():
+    print("\n"+"-" * 30 ,"\n")
+
+# def menu(option_1, option_2):
+#     if option_1 == "1":
+#         return need_assistance
+#     elif option_2 == "2":
+#         return offer_assistance
+#     else: 
+#         return need_valid_option
+    
+# def login(user_list):
+#     username_input = input("\n" "Please enter your username:  " "\n" "Enter Username: ")
+#     password_input = input("\n" "Please enter your password: " "\n" "Enter Password: ")
+#     user_accessed ={}
+
+def need_assistance(option_1):
+    if option_1 == 1:
+        print(name = input("Name: "))
+        print(location = input("Location: "))
+        print(vehicle_make = input("Vehicle Make: "))
+        print(vehicle_model = input("Vehicle Model: "))
+        print(recovery_desc = input("Description of Recovery Needs: "))  
+    else: 
+        return menu_user_input
+
+def offer_assistance():
+    if offer_assistance == 2:
+        print(name = input("Name: "))
+        print(location = input("Location: "))
+        print(vehicle_make = input("Vehicle Make: "))
+        print(vehicle_model = input("Vehicle Model: "))
+        print(recovery_gear = input("List of Recovery Gear:  "))
+    else: 
+        return menu_user_input
+
+
+
+       
+
+       
+
+
+
+
+# def need_valid_option(option_1, option_2):
+#     if option_1 <2:
+#         return False
+#         print("Invalid option, try again")
+#     elif option_2 >1:
+#         print("Invalid option, try again")
+#     else:
+#         return menu
+
+
+
+
+# def recovery_gear():
+
+
+print("\n" "Welcome to the Off-Road Recovery App!")
+border_line()
+
+#----------------------------------------------------
+#----------------------------------------------------
+#----------------------------------------------------
+choices = int(input("Choose an option: " "\n""1. I need recovery assistance" "\n""2. I want to assist in recovering someone" "\n""3. Login (Under Construction)""\n""4. Sign-up (Under Construction)" "\n"))
+def choice():
+        if choices == 1:
+            print(name = input("Name: "))
+            print(location = input("Location: "))
+            print(vehicle_make = input("Vehicle Make: "))
+            print(vehicle_model = input("Vehicle Model: "))
+            print(recovery_desc = input("Description of Recovery Needs: "))  
+            choices -= 1
+        elif choice == 2:
+            print(name = input("Name: "))
+            print(location = input("Location: "))
+            print(vehicle_make = input("Vehicle Make: "))
+            print(vehicle_model = input("Vehicle Model: "))
+            print(recovery_gear = input("List of Recovery Gear:  "))
+            choices -= 1
+        elif choice == 3:
+            print("Option is under construction, please choose option 1 or 2 at this time." "\n")
+            choices -= 1
+        elif choice == 4:
+            print("Option is under construction, please choose option 1 or 2 at this time." "\n")
+            choices -=1
+        else:
+            print("Invalid entery, please choose option 1 or 2 at this time.")
+           
+
+
+
+        
+
+
+#----------------------------------------------------
+#Welcome Menu
+
+
+# instructions = (int(input("Choose an option: " "\n")))
+# print("1. I need recovery assistance" "\n")
+# print("2. I want to assist in recovering someone" "\n")
+# print("3. Login (Under Construction)""\n")
+# print("4. Sign-up (Under Construction)" "\n")
+
+
+
+
+    # print(input("Choose an option: " "\n""1. I need recovery assistance" "\n""2. I want to assist in recovery""\n"))
+    # if input == "1":
+    #     need_assist_intake()
+    # elif input == "2":
+    #     offer_assist_intake()
+    # elif input != "1" or "2":
+    #     welcome_menu()
+    # else:
+    #     print("Invalid Entry, Please Try Again")
+    #     return welcome_menu()
+    
+
+
+# need_assist = input()
+# offer_assist = input()
+
+# def main_menu_input(option_1, option_2):
+#     print(input("Enter option: "))
+#     if option_1 == need_assist:
+#        return need_assist_intake()
+#     elif option_2 == offer_assist:
+#         return offer_assist_intake()
+#     else:
+#         print("Please enter a valid option") #<- Not working, entering any number will continue to work
+#         return welcome_menu
+
+# def request_success():
+#     print("Thank you! Your assistance request has been posted!")
+
+# def response():
+#     input("Are these details correct? y/n: ")
+#     if input == "y,yes,Y,YES":
+#        request_success #<- Not Working, program quits before message 
+#     elif input == "n, no, N, NO":
+#         return welcome_menu
+
+
+    
+# welcome_menu()
+# response()
+# request_success()
+
+
+#welcome_menu() # currently a no response will return you to the main menu, but I would like the user to be able to append their list.
+#Test Code
