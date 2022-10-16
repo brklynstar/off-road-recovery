@@ -1,0 +1,121 @@
+#Define Functions
+def border_line(): 
+    print("-" * 40)
+
+def welcome_msg():
+    print()
+    border_line()
+    print("Welcome to the Off-Road_Recovery App!")
+    border_line()
+
+def menu():
+    print("[1] I Need Assistance")
+    print("[2] I Want to Help Recover")
+    print("[3] Exit Program\n")
+
+def get_post_details(): 
+    border_line()
+    print("Enter Your Post Details")
+    border_line()
+
+def need_assist_intake():
+    get_post_details()
+    name = input("Name: ")
+    location = input("Location: ")
+    vehicle_make = input("Vehicle Make: ")
+    vehicle_model = input("Vehicle Model: ")
+    recovery_desc = input("Description of Recovery Needs: ")
+    print("\n","Your post submission details:""\n","\n","Name:","\n", name,"\n","\n","Location:","\n",location,"\n","\n","Vehicle Make:","\n", vehicle_make,"\n","\n","Vehicle Model:","\n", vehicle_model,"\n","\n","Recovery Details:","\n",recovery_desc,"\n", "\n")
+    
+
+
+
+def offer_assist_intake():
+    get_post_details()
+    name = input("Name: ")
+    location = input("Location: ")
+    vehicle_make = input("Vehicle Make: ")
+    vehicle_model = input("Vehicle Model: ")
+    recovery_gear = input("List of Recovery Gear:  ")
+    print("Your post submission details:""\n","\n","Name: ",name,"\n","Location: ",location,"\n","Vehicle Make: ",vehicle_make,"Vehicle Model: ","\n",vehicle_model,"Recovery Gear: ","\n",recovery_gear,"\n")
+
+def request_successful():
+    print("Thank you! Your assistance request has been posted!")
+
+def response():
+    input("Are these details correct? y/n: ")
+    if input == "y,yes,Y,YES":
+       request_success() #<- Not Working, program quits before message 
+    elif input == "n, no, N, NO":
+        return response()
+
+response_input =()
+  
+welcome_msg()
+menu()
+option= int(input("Enter Option:  "))
+
+while option != 0:
+    if option == 1:
+        need_assist_intake()
+        response()
+        if input == "y":
+            request_successful()
+    elif option == 2:
+        offer_assist_intake()
+    else:
+        print("Invalid Entry, Try Again")
+menu()
+    
+print("We're searching for a local off-road member near you...")
+        
+
+
+
+
+
+    # print(input("Choose an option: " "\n""1. I need recovery assistance" "\n""2. I want to assist in recovery""\n"))
+    # if input == "1":
+    #     need_assist_intake()
+    # elif input == "2":
+    #     offer_assist_intake()
+    # elif input != "1" or "2":
+    #     welcome_menu()
+    # else:
+    #     print("Invalid Entry, Please Try Again")
+    #     return welcome_menu()
+    
+
+
+need_assist = input()
+offer_assist = input()
+
+def main_menu_input(option_1, option_2):
+    print(input("Enter option: "))
+    if option_1 == need_assist:
+       return need_assist_intake()
+    elif option_2 == offer_assist:
+        return offer_assist_intake()
+    else:
+        print("Please enter a valid option") #<- Not working, entering any number will continue to work
+        return welcome_menu
+
+def request_success():
+    print("Thank you! Your assistance request has been posted!")
+
+def response():
+    input("Are these details correct? y/n: ")
+    if input == "y,yes,Y,YES":
+       request_success #<- Not Working, program quits before message 
+    elif input == "n, no, N, NO":
+        return welcome_menu
+
+
+    
+welcome_menu()
+response()
+request_success()
+
+
+#welcome_menu() # currently a no response will return you to the main menu, but I would like the user to be able to append their list.
+#Test Code
