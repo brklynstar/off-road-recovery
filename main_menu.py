@@ -1,4 +1,4 @@
-#Define Functions
+#Main Menu Functions
 def border_line(): 
     print("-" * 40)
 
@@ -21,20 +21,11 @@ def get_post_details():
     border_line()
     print()
 
-yes = ("y,yes, Y, YES")
-no = ("n, no, N, No")
 
-
-def post_detail_confirm():
-    border_line()
-    input("Are these details correct? y/n: ")
-    print()
-    if yes == yes:
-        return request_successful()
-    elif no == no:
-        return
-    else: 
-        print("Invalid Entry, Try Again")
+#Functions that get user input
+def user_input(prompt):
+    user_input = input = input(prompt).lower().upper()
+    return user_input
 
 def need_assist_intake():
     print()
@@ -75,10 +66,30 @@ def request_successful():
     print("Thank you! Your submission has posted!\n")
     print("We're searching for available recovery assistance near you... \nHang tight...")
   
+#Functions to append answers
+def update_input():
+    
+
+    
+
+yes = ("y,yes, Y, YES")
+no = ("n, no, N, No")
+def post_detail_confirm():
+    border_line()
+    input("Are these details correct? y/n: ")
+    print()
+    if no == no:
+     return 
+    if yes == yes:
+        return request_successful()
+    else: 
+        print("Invalid Entry, Try Again")
+
+#Main Menu 
 #--------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------- 
 #--------------------------------------------------------------------------------------------
-#Main Menu 
+
 
 welcome_msg()
 print()
