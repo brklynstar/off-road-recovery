@@ -5,11 +5,11 @@ def border_line():
 def welcome_msg():
     print()
     border_line()
-    print("Welcome to the Off-Road_Recovery App!")
+    print("Welcome to the Off-Road Recovery App!")
     border_line()
 
 def menu():
-    print("Choose an Option:\n")
+    print("Select an Option:\n")
     print("[1] I Need Assistance")
     print("[2] I Want to Help Recover Someone")
     print("[3] Exit Program\n")
@@ -24,38 +24,44 @@ def get_post_details():
 def need_assist_intake():
     print()
     get_post_details()
-    name = input("Name: ""\n")
-    location = input("Location: ""\n")
-    vehicle_make = input("Vehicle Make: ""\n")
-    vehicle_model = input("Vehicle Model: ""\n")
-    recovery_desc = input("Description of Recovery Needs: ""\n")
+    name = input("\n""Name: ""\n")
+    location = input("\n""Location: ""\n")
+    coordinates = input("\n""Coordinates: ""\n")
+    vehicle_make = input("\n""Vehicle Make: ""\n")
+    vehicle_model = input("\n""Vehicle Model: ""\n")
+    vehicle_year =input("\n""Vehicle Year: ""\n")
+    recovery_desc = input("\n""Description of Recovery Needs: ""\n")
     border_line()
     print("Your post submission details:")
     border_line()
     print( "\n",
     "Name:","\n", name,"\n",
     "\n","Location:","\n",location,"\n",
+    "\n","Coordinates: ", coordinates,"\n",
     "\n","Vehicle Make:","\n","\n", vehicle_make,"\n",
-     "\n","Vehicle Model:","\n",vehicle_model,"\n",
+    "\n","Vehicle Model:","\n",vehicle_model,"\n",
+    "\n","Vehicle Year: ","\n", vehicle_year, "\n",
      "\n","Recovery Details:", "\n",recovery_desc,"\n")
      
    
 def offer_assist_intake():
     get_post_details()
-    name = input("\n""Name:  " "\n")
+    name = input("\n""Full Name:  ""\n")
     location = input("\n""Location:  ""\n")
     vehicle_make = input("\n""Vehicle Make:  ""\n")
     vehicle_model = input("\n""Vehicle Model: ""\n")
+    vehicle_year = input("\n"" Vehicle Year: ""\n")
     recovery_gear = input("\n""List of Recovery Gear:  ""\n")
     border_line()
     print("Your post submission details:")
     border_line()
     print( "\n",
-    "Name:","\n", name,"\n",
+    "Full Name:","\n", name,"\n",
     "\n","Location:","\n",location,"\n",
     "\n","Vehicle Make:","\n", vehicle_make,"\n",
-     "\n","Vehicle Model:","\n",vehicle_model,"\n",
-     "\n""List of Recovery Gear:", "\n",recovery_gear,"\n","\n")
+    "\n","Vehicle Model:","\n",vehicle_model,"\n",
+    "\n","Vehicle Year:", "\n", vehicle_year, "\n",
+    "\n","List of Recovery Gear: ", "\n",recovery_gear,"\n")
     
 
 def request_successful():
