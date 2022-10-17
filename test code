@@ -321,3 +321,22 @@ def choice():
 
 #welcome_menu() # currently a no response will return you to the main menu, but I would like the user to be able to append their list.
 #Test Code
+
+
+
+#     while True:
+#         list_item = int(input("Add items to your gear bag:"))
+#         if list_item == :
+#             gear_list.append()
+#         print()
+
+# def gear_list_format(gear_list):
+#     for gear_item in gear_list:
+#         print()
+#Functions to append answers
+# def update_input():
+
+#Functions that get user input
+# def user_input(prompt):
+#     user_input = input = input(prompt).lower().upper()
+#     return user_input

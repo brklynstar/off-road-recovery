@@ -21,12 +21,6 @@ def get_post_details():
     border_line()
     print()
 
-
-#Functions that get user input
-def user_input(prompt):
-    user_input = input = input(prompt).lower().upper()
-    return user_input
-
 def need_assist_intake():
     print()
     get_post_details()
@@ -43,15 +37,16 @@ def need_assist_intake():
     "\n","Location:","\n",location,"\n",
     "\n","Vehicle Make:","\n","\n", vehicle_make,"\n",
      "\n","Vehicle Model:","\n",vehicle_model,"\n",
-     "\n","Recovery Details:", "\n",recovery_desc,"\n","\n")
+     "\n","Recovery Details:", "\n",recovery_desc,"\n")
+     
    
 def offer_assist_intake():
     get_post_details()
-    name = input("Name:  " "\n")
-    location = input("Location:  ""\n")
-    vehicle_make = input("Vehicle Make:  ""\n")
-    vehicle_model = input("Vehicle Model: ""\n")
-    recovery_gear = input("List of Recovery Gear:  ""\n")
+    name = input("\n""Name:  " "\n")
+    location = input("\n""Location:  ""\n")
+    vehicle_make = input("\n""Vehicle Make:  ""\n")
+    vehicle_model = input("\n""Vehicle Model: ""\n")
+    recovery_gear = input("\n""List of Recovery Gear:  ""\n")
     border_line()
     print("Your post submission details:")
     border_line()
@@ -60,41 +55,45 @@ def offer_assist_intake():
     "\n","Location:","\n",location,"\n",
     "\n","Vehicle Make:","\n", vehicle_make,"\n",
      "\n","Vehicle Model:","\n",vehicle_model,"\n",
-     "\n","List of Recovery Gear:", "\n",recovery_gear,"\n","\n")
+     "\n""List of Recovery Gear:", "\n",recovery_gear,"\n","\n")
+    
 
 def request_successful():
     print("Thank you! Your submission has posted!\n")
     print("We're searching for available recovery assistance near you... \nHang tight...")
-  
-#Functions to append answers
-def update_input():
-    
+   
 
-    
+yes = str("y,yes").lower().upper()
+no = str("n, no").lower().upper()
 
-yes = ("y,yes, Y, YES")
-no = ("n, no, N, No")
+
 def post_detail_confirm():
     border_line()
-    input("Are these details correct? y/n: ")
+    user_answer = input("Are these details correct? y/n: ")
+    border_line()
     print()
-    if no == no:
-     return 
-    if yes == yes:
-        return request_successful()
+    if user_answer == "y":
+        request_successful()
+    elif  user_answer == "n":
+            print("No, worries! Let's try again!")
+            return main_menu()
     else: 
-        print("Invalid Entry, Try Again")
+       print("Invalid Entry, Try Again")
+       return post_detail_confirm
 
-#Main Menu 
+def main_menu():    
+    welcome_msg()
+    print()
+    menu()
+
+#Main Menu Loop
 #--------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------- 
 #--------------------------------------------------------------------------------------------
 
-
-welcome_msg()
-print()
-menu()
+main_menu()    
 option= int(input("Enter Option:  "))
+   
 
 while option != 0:
     if option == 1:
@@ -115,9 +114,3 @@ while option != 0:
     print()
     menu()
     option= int(input("Enter Option:  "))
-
-
-        
-
-
-
