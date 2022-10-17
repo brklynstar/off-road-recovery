@@ -37,7 +37,7 @@ def need_assist_intake():
     print( "\n",
     "Name:","\n", name,"\n",
     "\n","Location:","\n",location,"\n",
-    "\n","Coordinates: ", coordinates,"\n",
+    "\n","Coordinates: ""\n", coordinates,"\n",
     "\n","Vehicle Make:","\n","\n", vehicle_make,"\n",
     "\n","Vehicle Model:","\n",vehicle_model,"\n",
     "\n","Vehicle Year: ","\n", vehicle_year, "\n",
@@ -53,7 +53,7 @@ def offer_assist_intake():
     vehicle_year = input("\n"" Vehicle Year: ""\n")
     recovery_gear = input("\n""List of Recovery Gear:  ""\n")
     border_line()
-    print("Your post submission details:")
+    print("Your submission details:")
     border_line()
     print( "\n",
     "Full Name:","\n", name,"\n",
@@ -82,7 +82,9 @@ def post_detail_confirm():
         request_successful()
     elif  user_answer == "n":
             print("No, worries! Let's try again!")
-            return main_menu()
+            revisit_main_menu()
+            int(input("Enter Option:  "))
+            
     else: 
        print("Invalid Entry, Try Again")
        return post_detail_confirm
@@ -91,6 +93,31 @@ def main_menu():
     welcome_msg()
     print()
     menu()
+
+    
+def revisit_main_menu():
+    menu()
+    option= int(input("Enter Option:  "))
+    while option != 0:
+        if option == 1:
+            need_assist_intake() # Handles user needing assistance input and submission review
+            post_detail_confirm() #Handles if user inputs are correct and invalid answers
+            print()
+            break
+        elif option == 2:
+            offer_assist_intake()#Handles user offering assistance input and submission review
+            post_detail_confirm()
+            print() 
+            break 
+        elif option == 3:
+            print("\nThank you for using the Off-Road Recovery app!")
+            break
+        else:
+            print("Invalid entry, Try again.")
+        print()
+        menu()
+        option= int(input("Enter Option:  "))
+
 
 #Main Menu Loop
 #--------------------------------------------------------------------------------------------
