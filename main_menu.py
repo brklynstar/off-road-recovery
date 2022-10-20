@@ -5,14 +5,39 @@ def border_line():
 def welcome_msg():
     print()
     border_line()
-    print("Welcome to the Off-Road Recovery App!")
+    print("Welcome to ORRA!""\n""Off-Road Recovery App")
     border_line()
 
+def enter_option():
+    option= int(input("Enter Option:  "))
+    while option != 0:
+        if option == 1:
+            need_assist_intake() # Handles user needing assistance input and submission review
+            post_detail_confirm() #Handles if user inputs are correct and invalid answers
+            print()
+            break
+        elif option == 2:
+            offer_assist_intake()#Handles user offering assistance input and submission review
+            post_detail_confirm()
+            print() 
+            break 
+        elif option == 3:
+            print("\nThank you for using the Off-Road Recovery app!")
+            break
+        else:
+            print("Invalid entry, Try again.")
+        print()
+        menu()
+        enter_option()
+
+    
 def menu():
     print("Select an Option:\n")
     print("[1] I Need Assistance")
     print("[2] I Want to Help Recover Someone")
     print("[3] Exit Program\n")
+    enter_option()
+    
 
 def get_post_details(): 
     print()
@@ -66,7 +91,7 @@ def offer_assist_intake():
 
 def request_successful():
     print("Thank you! Your submission has posted!\n")
-    print("We're searching for available recovery assistance near you... \nHang tight...")
+    print("Thank you for using the Off-Road Recovery app!")
    
 
 yes = str("y,yes").lower().upper()
@@ -84,7 +109,6 @@ def post_detail_confirm():
             print("No, worries! Let's try again!")
             revisit_main_menu()
             int(input("Enter Option:  "))
-            
     else: 
        print("Invalid Entry, Try Again")
        return post_detail_confirm
@@ -116,7 +140,8 @@ def revisit_main_menu():
             print("Invalid entry, Try again.")
         print()
         menu()
-        option= int(input("Enter Option:  "))
+        enter_option()
+        # option= int(input("Enter Option:  "))
 
 
 #Main Menu Loop
@@ -124,26 +149,7 @@ def revisit_main_menu():
 #-------------------------------------------------------------------------------------------- 
 #--------------------------------------------------------------------------------------------
 
-main_menu()    
-option= int(input("Enter Option:  "))
-   
+main_menu()   
 
-while option != 0:
-    if option == 1:
-        need_assist_intake() # Handles user needing assistance input and submission review
-        post_detail_confirm() #Handles if user inputs are correct and invalid answers
-        print()
-        break
-    elif option == 2:
-        offer_assist_intake()#Handles user offering assistance input and submission review
-        post_detail_confirm()
-        print() 
-        break 
-    elif option == 3:
-        print("\nThank you for using the Off-Road Recovery app!")
-        break
-    else:
-        print("Invalid entry, Try again.")
-    print()
-    menu()
-    option= int(input("Enter Option:  "))
+# option= int(input("Enter Option:  "))
+

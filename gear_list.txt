@@ -19,5 +19,9 @@ Air Compressor
 Shovel
 Traction Boards
 Hi-Lift Jack
+Empty Jerry Can
+Full Jerry Can
+Water
+Spare Tire Tool Kit
 
 
